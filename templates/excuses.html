@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Excuses</title>
+</head>
+<body>
+    <h1>Excuses for {{ subcategory.capitalize() }}</h1>
+    <ul>
+        {% for excuse in excuse_list %}
+        <li>{{ excuse }}</li>
+        {% endfor %}
+    </ul>
+    <form action="/" method="get">
+        <button type="submit">Go Back</button>
+    </form>
+</body>
+</html>
