@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excuse Generator</title>
+</head>
+<body>
+    <h1>Welcome to the Excuse Generator!</h1>
+    <p>What do you need an excuse for?</p>
+    <form action="/subcategory" method="post">
+        <select name="category">
+            {% for category in categories %}
+            <option value="{{ category }}">{{ category.capitalize() }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>
